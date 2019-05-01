@@ -15,7 +15,7 @@ public class DeletePizzaListener implements ActionListener {
 		this.app = app;
 		this.pizzaBox = pizzaBox;
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		

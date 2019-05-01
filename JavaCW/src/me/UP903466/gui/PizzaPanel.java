@@ -1,9 +1,7 @@
 package me.UP903466.gui;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.FlowLayout;
-
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
@@ -16,8 +14,6 @@ public class PizzaPanel extends JPanel {
 	public PizzaPanel(PizzaApp app) {
 		
 		this.setLayout(new FlowLayout());
-		this.getLayout().layoutContainer(this);
-		this.setMaximumSize(new Dimension(1000, 4000));
 		
 		this.setBorder(BorderFactory.createTitledBorder(
 				BorderFactory.createLineBorder(Color.BLACK), "Your Order:"));

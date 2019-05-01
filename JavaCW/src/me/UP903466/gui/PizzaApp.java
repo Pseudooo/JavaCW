@@ -1,9 +1,6 @@
 package me.UP903466.gui;
 
-import java.awt.Dimension;
-
 import javax.swing.JFrame;
-import javax.swing.JScrollPane;
 import javax.swing.UIManager;
 
 import me.UP903466.objects.Crust;
@@ -32,7 +29,7 @@ public class PizzaApp extends JFrame {
 		// Setup window
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Pizzas");
-		this.setSize(1000, 800);
+		this.setSize(1050, 920);
 		this.setResizable(false);
 		//this.setLayout(new GridLayout(0, 2));
 		
@@ -53,27 +50,7 @@ public class PizzaApp extends JFrame {
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
+		
 		
 		this.add(this.pane);
 		/*
