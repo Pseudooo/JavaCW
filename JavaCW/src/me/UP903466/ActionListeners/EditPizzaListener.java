@@ -21,6 +21,7 @@ public class EditPizzaListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		
+		@SuppressWarnings("unused")
 		EditPizzaWin edit = new EditPizzaWin(this.app, this.pizzaBox);
 		
 	}

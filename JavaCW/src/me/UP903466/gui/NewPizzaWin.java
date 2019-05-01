@@ -53,6 +53,8 @@ public class NewPizzaWin extends JFrame {
 		
 	}
 	
+	// **************************************************** START OF GETTERS
+	
 	public Size getSelectedSize() {
 		return (Size) this.cb_Size.getSelectedItem();
 	}
@@ -72,5 +74,7 @@ public class NewPizzaWin extends JFrame {
 	public Sauce getSelectedSauce() {
 		return (Sauce) this.cb_Sauce.getSelectedItem();
 	}
+	
+	// ****************************************************** END OF GETTERS
 	
 }

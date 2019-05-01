@@ -22,8 +22,6 @@ public class DeletePizzaListener implements ActionListener {
 		this.app.getPizzaPanel().removePizzaBox(this.pizzaBox);
 		this.app.getOrder().removePizza(pizzaBox.getPizza().getID());
 		
-		System.out.println("Boi that's a del");
-		
 	}
 	
 }

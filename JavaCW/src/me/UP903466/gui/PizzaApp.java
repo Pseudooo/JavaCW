@@ -50,18 +50,12 @@ public class PizzaApp extends JFrame {
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
+		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
+		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
+		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
 		
 		
 		this.add(this.pane);
-		/*
-		JScrollPane scrllPane = new JScrollPane(
-					this.pane,
-					JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
-					JScrollPane.HORIZONTAL_SCROLLBAR_NEVER
-				);
-		
-		this.getContentPane().add(scrllPane);
-		*/
 		
 		this.setVisible(true);
 		

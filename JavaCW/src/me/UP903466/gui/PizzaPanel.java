@@ -13,7 +13,7 @@ public class PizzaPanel extends JPanel {
 
 	public PizzaPanel(PizzaApp app) {
 		
-		this.setLayout(new FlowLayout());
+		this.setLayout(new FlowLayout(FlowLayout.LEFT));
 		
 		this.setBorder(BorderFactory.createTitledBorder(
 				BorderFactory.createLineBorder(Color.BLACK), "Your Order:"));
