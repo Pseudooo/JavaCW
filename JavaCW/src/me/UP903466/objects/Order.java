@@ -25,7 +25,7 @@ public class Order {
 	}
 	
 	public void removePizza(Pizza pizza) {
-		this.pizzas.remove(pizza);
+		this.removePizza(pizza.getID());
 	}
 	
 	public void removePizza(UUID id) {
