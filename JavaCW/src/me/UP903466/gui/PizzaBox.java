@@ -11,7 +11,6 @@ import javax.swing.JPanel;
 
 import me.UP903466.ActionListeners.DeletePizzaListener;
 import me.UP903466.ActionListeners.EditPizzaListener;
-import me.UP903466.objects.Order;
 import me.UP903466.objects.Pizza;
 
 public class PizzaBox extends JComponent {
@@ -24,7 +23,7 @@ public class PizzaBox extends JComponent {
 		lbl_Topping1, lbl_Topping2, lbl_Sauce;
 	private final JButton btn_Edit, btn_Del;
 	
-	public PizzaBox(Pizza pizza) {
+	public PizzaBox(PizzaApp app, Pizza pizza) {
 		
 		// Setup class
 		this.pizza = pizza;
@@ -65,8 +64,8 @@ public class PizzaBox extends JComponent {
 		// Assign border for this item
 		this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		
-		this.btn_Edit.addActionListener(new EditPizzaListener(this));
-		this.btn_Del.addActionListener(new DeletePizzaListener(this));
+		this.btn_Edit.addActionListener(new EditPizzaListener(app, this));
+		this.btn_Del.addActionListener(new DeletePizzaListener(app, this));
 		
 	}
 	

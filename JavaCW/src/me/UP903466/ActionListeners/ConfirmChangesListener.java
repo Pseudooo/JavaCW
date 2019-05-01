@@ -3,10 +3,7 @@ package me.UP903466.ActionListeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-
 import me.UP903466.gui.EditPizzaWin;
-import me.UP903466.gui.PizzaBox;
 import me.UP903466.objects.Pizza;
 
 public class ConfirmChangesListener implements ActionListener {

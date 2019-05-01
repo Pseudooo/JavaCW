@@ -14,6 +14,9 @@ public class PizzaApp extends JFrame {
 
 	private static final long serialVersionUID = 3463110150438682724L;
 
+	private Order order;
+	private PizzaPanel pane;
+	
 	public PizzaApp() {
 		
 		try {
@@ -31,78 +34,26 @@ public class PizzaApp extends JFrame {
 		//this.setLayout(new GridLayout(0, 2));
 		
 		// Order that will be used internally to track pizzas
-		Order order = new Order();
+		this.order = new Order();
+		Pizza p = new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY);
+		order.addPizza(p);
 		
-		Pizza[] pizzas = {
-				new Pizza(
-						Size.MEDIUM,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.EXTRA_CHEESE,
-						Topping.CHILLI
-					),
-				new Pizza(
-						Size.MEDIUM,
-						Crust.STUFFED,
-						Sauce.PESTO,
-						Topping.OLIVES,
-						Topping.ONION
-					),
-				new Pizza(
-						Size.SMALL,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.CHILLI,
-						Topping.PEPPERONI
-					),
-				new Pizza(
-						Size.SMALL,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.OLIVES,
-						Topping.OLIVES
-					),
-				new Pizza(
-						Size.MEDIUM,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.EXTRA_CHEESE,
-						Topping.CHILLI
-					),
-				new Pizza(
-						Size.MEDIUM,
-						Crust.STUFFED,
-						Sauce.PESTO,
-						Topping.OLIVES,
-						Topping.ONION
-					),
-				new Pizza(
-						Size.SMALL,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.CHILLI,
-						Topping.PEPPERONI
-					),
-				new Pizza(
-						Size.SMALL,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.OLIVES,
-						Topping.OLIVES
-					)
-		};
+		this.pane = new PizzaPanel(this);
 		
-		PizzaPanel pp = new PizzaPanel();
+		this.pane.addPizzaBox(new PizzaBox(this, p));
 		
-		for(Pizza pizza : pizzas) {
-			PizzaBox pb = new PizzaBox(pizza);
-			pp.add(pb);
-		}
-		
-		this.getContentPane().add(pp);
+		this.getContentPane().add(pane);
 		
 		this.setVisible(true);
 		
+	}
+	
+	public Order getOrder() {
+		return this.order;
+	}
+	
+	public PizzaPanel getPizzaPanel() {
+		return this.pane;
 	}
 	
 }

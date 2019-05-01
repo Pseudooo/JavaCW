@@ -5,21 +5,23 @@ import java.awt.event.ActionListener;
 import javax.swing.JComponent;
 
 import me.UP903466.gui.EditPizzaWin;
+import me.UP903466.gui.PizzaApp;
 import me.UP903466.gui.PizzaBox;
 
 public class EditPizzaListener implements ActionListener {
 	
 	private final PizzaBox pizzaBox;
+	private final PizzaApp app;
 	
-	public EditPizzaListener(PizzaBox pizzaBox) {
+	public EditPizzaListener(PizzaApp app, PizzaBox pizzaBox) {
 		this.pizzaBox = pizzaBox;
+		this.app = app;
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		
-		EditPizzaWin edit = new EditPizzaWin(this.pizzaBox);
-		System.out.println("Edit");
+		EditPizzaWin edit = new EditPizzaWin(this.app, this.pizzaBox);
 		
 	}
 }
