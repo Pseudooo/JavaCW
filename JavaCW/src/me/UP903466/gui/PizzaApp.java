@@ -1,7 +1,5 @@
 package me.UP903466.gui;
 
-import java.awt.GridLayout;
-
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 

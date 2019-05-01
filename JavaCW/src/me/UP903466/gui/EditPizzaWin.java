@@ -11,7 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 
 import me.UP903466.ActionListeners.CancelOperationListener;
+import me.UP903466.ActionListeners.ConfirmChangesListener;
 import me.UP903466.objects.Crust;
+import me.UP903466.objects.Pizza;
 import me.UP903466.objects.Sauce;
 import me.UP903466.objects.Size;
 import me.UP903466.objects.Topping;
@@ -106,9 +108,40 @@ public class EditPizzaWin extends JFrame {
 		btnPanel.add(this.btn_Cancel);
 		this.add(btnPanel);
 		
+		ConfirmChangesListener ConfirmListener =
+				new ConfirmChangesListener(this);
+		this.btn_Confirm.addActionListener(ConfirmListener);
 		
 		this.btn_Cancel.addActionListener(new CancelOperationListener(this));
 		
+	}
+	
+	public Size getSelectedSize() {
+		return (Size) this.cb_Size.getSelectedItem();
+	}
+	
+	public Crust getSelectedCrust() {
+		return (Crust) this.cb_Crust.getSelectedItem();
+	}
+	
+	public Topping getSelectedTopping1() {
+		return (Topping) this.cb_Topping1.getSelectedItem();
+	}
+	
+	public Topping getSelectedTopping2() {
+		return (Topping) this.cb_Topping2.getSelectedItem();
+	}
+	
+	public Sauce getSelectedSauce() {
+		return (Sauce) this.cb_Sauce.getSelectedItem();
+	}
+	
+	public PizzaBox getPizzaBox() {
+		return this.pizzaBox;
+	}
+	
+	public Pizza getPizza() {
+		return this.pizzaBox.getPizza();
 	}
 	
 }
