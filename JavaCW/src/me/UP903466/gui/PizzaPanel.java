@@ -16,7 +16,7 @@ public class PizzaPanel extends JPanel {
 		this.setLayout(new FlowLayout(FlowLayout.LEFT));
 		
 		this.setBorder(BorderFactory.createTitledBorder(
-				BorderFactory.createLineBorder(Color.BLACK), "Your Order:"));
+				BorderFactory.createLineBorder(Color.BLACK), "<html><h2>Your Order:</h2></html>"));
 		
 		this.app = app;
 		

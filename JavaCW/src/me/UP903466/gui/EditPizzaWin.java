@@ -28,7 +28,7 @@ public class EditPizzaWin extends JFrame {
 	private JComboBox<Sauce> cb_Sauce;
 	
 	private JButton btn_Confirm, btn_Cancel;
-
+	
 	private final PizzaBox pizzaBox;
 	
 	public EditPizzaWin(PizzaBox pizzaBox) {
@@ -42,7 +42,7 @@ public class EditPizzaWin extends JFrame {
 		
 		// Setup window
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setTitle("Pizzas");
+		this.setTitle("Edit Pizza");
 		this.setSize(300, 300);
 		this.setResizable(false);
 		this.setVisible(true);
