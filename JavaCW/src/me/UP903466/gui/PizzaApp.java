@@ -43,7 +43,7 @@ public class PizzaApp extends JFrame {
 		JPanel header = new JPanel();
 		header.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		
-		JLabel lbl_OrdfuckiterTotal = new JLabel("Order Cost: ");
+		JLabel lbl_OrderTotal = new JLabel("Order Cost: ");
 		
 		this.pane = new PizzaPanel(this);
 		

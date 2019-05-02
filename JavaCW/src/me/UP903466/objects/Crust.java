@@ -16,7 +16,6 @@ public enum Crust {
 	private Crust(String name, double cost) {
 		this.name = name;
 		this.cost = cost;
-		
 	}
 	
 	public double getCost() {
