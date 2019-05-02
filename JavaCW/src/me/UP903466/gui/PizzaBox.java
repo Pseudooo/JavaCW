@@ -64,7 +64,7 @@ public class PizzaBox extends JComponent {
 		// Assign border for this item
 		this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		
-		this.btn_Edit.addActionListener(new EditPizzaListener(app, this));
+		this.btn_Edit.addActionListener(new EditPizzaListener(this));
 		this.btn_Del.addActionListener(new DeletePizzaListener(app, this));
 		
 	}

@@ -29,10 +29,9 @@ public class EditPizzaWin extends JFrame {
 	
 	private JButton btn_Confirm, btn_Cancel;
 
-	private final PizzaApp app;
 	private final PizzaBox pizzaBox;
 	
-	public EditPizzaWin(PizzaApp app, PizzaBox pizzaBox) {
+	public EditPizzaWin(PizzaBox pizzaBox) {
 		
 		try {
 			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
@@ -50,7 +49,6 @@ public class EditPizzaWin extends JFrame {
 		this.setLayout(new GridLayout(6, 0));
 		
 		this.pizzaBox = pizzaBox;
-		this.app = app;
 		
 		// Assign combo box options
 		this.cb_Size = new JComboBox<Size>(Size.values());

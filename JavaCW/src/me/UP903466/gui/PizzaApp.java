@@ -1,6 +1,10 @@
 package me.UP903466.gui;
 
+import java.awt.FlowLayout;
+
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.UIManager;
 
 import me.UP903466.objects.Crust;
@@ -35,13 +39,11 @@ public class PizzaApp extends JFrame {
 		
 		// Order that will be used internally to track pizzas
 		this.order = new Order();
-		order.addPizza(new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY));
-		order.addPizza(new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY));
-		order.addPizza(new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY));
-		order.addPizza(new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY));
-		order.addPizza(new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY));
-		order.addPizza(new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY));
-		order.addPizza(new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY));
+		
+		JPanel header = new JPanel();
+		header.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		
+		JLabel lbl_OrdfuckiterTotal = new JLabel("Order Cost: ");
 		
 		this.pane = new PizzaPanel(this);
 		
@@ -53,7 +55,6 @@ public class PizzaApp extends JFrame {
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
-		
 		
 		this.add(this.pane);
 		
