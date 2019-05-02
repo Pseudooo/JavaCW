@@ -23,6 +23,8 @@ public class PizzaApp extends JFrame {
 	private Order order;
 	private PizzaPanel pane;
 	
+	private JLabel lbl_TotalCost;
+	
 	public PizzaApp() {
 		
 		// Order that will be used internally to track pizzas
@@ -45,7 +47,7 @@ public class PizzaApp extends JFrame {
 		this.setSize(1050, 920);
 		this.setResizable(false);
 		
-		JLabel lbl_TotalCost = new JLabel("<html><h2>Order Cost: <em>£0.00</em></h2></html>");
+		this.lbl_TotalCost = new JLabel("<html><h2>Order Cost: <em>£0.00</em></h2></html>");
 		JButton btn_NewPizza = new JButton("New Pizza");
 		JButton btn_ClearOrder = new JButton("Clear Order");
 		
@@ -92,6 +94,11 @@ public class PizzaApp extends JFrame {
 	
 	public PizzaPanel getPizzaPanel() {
 		return this.pane;
+	}
+	
+	public void updateOrderText() {
+		this.lbl_TotalCost.setText(String.format("<html><h2>Order Cost: <em>£%.2f</em></h2></html>",
+				this.order.getTotalCost()));
 	}
 	
 }

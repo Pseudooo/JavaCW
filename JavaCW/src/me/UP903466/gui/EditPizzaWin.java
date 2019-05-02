@@ -31,7 +31,7 @@ public class EditPizzaWin extends JFrame {
 	
 	private final PizzaBox pizzaBox;
 	
-	public EditPizzaWin(PizzaBox pizzaBox) {
+	public EditPizzaWin(PizzaApp app, PizzaBox pizzaBox) {
 		
 		try {
 			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
@@ -109,7 +109,7 @@ public class EditPizzaWin extends JFrame {
 		this.add(btnPanel);
 		
 		ConfirmChangesListener ConfirmListener =
-				new ConfirmChangesListener(this);
+				new ConfirmChangesListener(app, this);
 		this.btn_Confirm.addActionListener(ConfirmListener);
 		
 		this.btn_Cancel.addActionListener(new CancelOperationListener(this));

@@ -60,4 +60,14 @@ public class Order {
 		return format;
 	}
 	
+	public double getTotalCost() {
+		double cost = 0;
+		
+		for(Pizza p : this.pizzas) {
+			cost += p.getTotalCost();
+		}
+		
+		return cost;
+	}
+	
 }

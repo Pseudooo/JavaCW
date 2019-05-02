@@ -41,7 +41,8 @@ public class AddNewPizzaListener implements ActionListener {
 		this.order.addPizza(p);
 		
 		this.panel.addPizzaBox(new PizzaBox(this.app, p));
-				
+		
+		this.app.updateOrderText();
 		
 	}
 	

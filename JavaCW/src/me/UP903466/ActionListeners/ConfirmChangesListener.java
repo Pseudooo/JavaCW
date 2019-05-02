@@ -4,13 +4,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import me.UP903466.gui.EditPizzaWin;
+import me.UP903466.gui.PizzaApp;
 import me.UP903466.objects.Pizza;
 
 public class ConfirmChangesListener implements ActionListener {
 	
+	private final PizzaApp app;
 	private final EditPizzaWin window;
 	
-	public ConfirmChangesListener(EditPizzaWin window) {
+	public ConfirmChangesListener(PizzaApp app, EditPizzaWin window) {
+		this.app = app;
 		this.window = window; // Assign
 	}
 	
@@ -29,6 +32,8 @@ public class ConfirmChangesListener implements ActionListener {
 		
 		// Kill the edit window
 		this.window.dispose();
+		
+		this.app.updateOrderText();
 		
 	}
 	
