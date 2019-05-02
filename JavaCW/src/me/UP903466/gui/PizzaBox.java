@@ -21,6 +21,7 @@ public class PizzaBox extends JComponent {
 	
 	private final JLabel lbl_TotalCost, lbl_Size, lbl_Crust, lbl_BaseCost,
 		lbl_Topping1, lbl_Topping2, lbl_Sauce;
+	
 	private final JButton btn_Edit, btn_Del;
 	
 	public PizzaBox(PizzaApp app, Pizza pizza) {

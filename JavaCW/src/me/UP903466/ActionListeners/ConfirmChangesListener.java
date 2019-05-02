@@ -11,7 +11,7 @@ public class ConfirmChangesListener implements ActionListener {
 	private final EditPizzaWin window;
 	
 	public ConfirmChangesListener(EditPizzaWin window) {
-		this.window = window;
+		this.window = window; // Assign
 	}
 	
 	public void actionPerformed(ActionEvent e) {

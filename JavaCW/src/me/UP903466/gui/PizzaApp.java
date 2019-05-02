@@ -43,8 +43,6 @@ public class PizzaApp extends JFrame {
 		JPanel header = new JPanel();
 		header.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		
-		
-		
 		this.pane = new PizzaPanel(this);
 		
 		this.pane.addPizzaBox(new PizzaBox(this, new Pizza(Size.LARGE, Crust.DEEP, Sauce.PESTO, Topping.ANCHOVY, Topping.ANCHOVY)));
