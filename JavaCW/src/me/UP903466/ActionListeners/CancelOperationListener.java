@@ -6,9 +6,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 public class CancelOperationListener implements ActionListener {
-
+	
 	private final JFrame window;
 	
+	/**
+	 * @param window
+	 * The dialog window that is to be terminated
+	 */
 	public CancelOperationListener(JFrame window) {
 		this.window = window;
 	}

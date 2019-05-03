@@ -42,6 +42,10 @@ public class Order {
 		this.pizzas.clear();
 	}
 	
+	public int size() {
+		return this.pizzas.size();
+	}
+	
 	/*
 	 * Override the toString method in order to provide
 	 * string output for the order.

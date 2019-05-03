@@ -11,6 +11,13 @@ public class DeletePizzaListener implements ActionListener {
 	private final PizzaApp app;
 	private final PizzaBox pizzaBox;
 	
+	/**
+	 * @param app
+	 * The application that will have the pizza removed from it
+	 * @param 
+	 * pizzaBox the PizzaBox that is to be removed from the main
+	 * interface
+	 */
 	public DeletePizzaListener(PizzaApp app, PizzaBox pizzaBox) {
 		this.app = app;
 		this.pizzaBox = pizzaBox;
@@ -20,7 +27,7 @@ public class DeletePizzaListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		this.app.getPizzaPanel().removePizzaBox(this.pizzaBox);
-		this.app.getOrder().removePizza(pizzaBox.getPizza().getID());
+		this.app.getOrder().removePizza(this.pizzaBox.getPizza().getID());
 		this.app.updateOrderText();
 		
 	}

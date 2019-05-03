@@ -6,22 +6,23 @@ import java.awt.event.ActionListener;
 import me.UP903466.gui.NewPizzaWin;
 import me.UP903466.gui.PizzaApp;
 import me.UP903466.gui.PizzaBox;
-import me.UP903466.gui.PizzaPanel;
-import me.UP903466.objects.Order;
 import me.UP903466.objects.Pizza;
 
 public class AddNewPizzaListener implements ActionListener {
 
 	private final PizzaApp app;
 	private final NewPizzaWin window;
-	private final Order order;
-	private final PizzaPanel panel;
 	
-	public AddNewPizzaListener(PizzaApp app, NewPizzaWin window, Order order, PizzaPanel panel) {
+	/**
+	 * 
+	 * @param app
+	 * The application that this listener is to be instantiated by
+	 * @param window
+	 * The dialog window that is being interacted with
+	 */
+	public AddNewPizzaListener(PizzaApp app, NewPizzaWin window) {
 		this.app = app;
 		this.window = window;
-		this.order = order;
-		this.panel = panel;
 	}
 	
 	@Override
@@ -30,6 +31,7 @@ public class AddNewPizzaListener implements ActionListener {
 		// Kill the window
 		window.dispose();
 		
+		// Instantiate the pizza that is to be added
 		Pizza p = new Pizza(
 					window.getSelectedSize(),
 					window.getSelectedCrust(),
@@ -38,10 +40,11 @@ public class AddNewPizzaListener implements ActionListener {
 					window.getSelectedTopping2()
 				);
 		
-		this.order.addPizza(p);
+		// Register the pizza with both the order and the iterface
+		this.app.getOrder().addPizza(p);
+		this.app.getPizzaPanel().addPizzaBox(new PizzaBox(this.app, p));
 		
-		this.panel.addPizzaBox(new PizzaBox(this.app, p));
-		
+		// Update the total cost in the primary window
 		this.app.updateOrderText();
 		
 	}

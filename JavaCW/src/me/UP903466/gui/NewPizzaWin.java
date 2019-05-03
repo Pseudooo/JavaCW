@@ -31,9 +31,11 @@ public class NewPizzaWin extends JFrame {
 	
 	public NewPizzaWin(PizzaApp app, Order order, PizzaPanel panel) {
 		
+		// Attempt the LookAndFeel
 		try {
 			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 		}catch(Exception e) {
+			// Handle error
 			System.err.println("An error has occurred with the look at feel!");
 			e.printStackTrace();
 		}
@@ -59,6 +61,8 @@ public class NewPizzaWin extends JFrame {
 		this.cb_Topping1.setSelectedItem(Topping.NONE);
 		this.cb_Topping2.setSelectedItem(Topping.NONE);
 		this.cb_Sauce.setSelectedItem(Sauce.TOMATO);
+		
+		// Containers for each combo box
 		
 		JPanel sizePanel = new JPanel();
 		sizePanel.setLayout(new FlowLayout());
@@ -95,10 +99,12 @@ public class NewPizzaWin extends JFrame {
 		saucePanel.add(this.cb_Sauce);
 		this.add(saucePanel);
 		
+		// Assign buttons
 		this.btn_Confirm = new JButton("Add Pizza");
 		this.btn_Cancel = new JButton("Cancel");
 		
-		AddNewPizzaListener newPizza = new AddNewPizzaListener(app, this, order, panel);
+		// Add Action Listeners
+		AddNewPizzaListener newPizza = new AddNewPizzaListener(app, this);
 		this.btn_Confirm.addActionListener(newPizza);
 		this.btn_Cancel.addActionListener(new CancelOperationListener(this));
 		
@@ -109,6 +115,8 @@ public class NewPizzaWin extends JFrame {
 		this.add(btnPanel);
 		
 	}
+	
+	// **************************************************** START OF GETTERS
 	
 	public Size getSelectedSize() {
 		return (Size) this.cb_Size.getSelectedItem();
@@ -129,5 +137,7 @@ public class NewPizzaWin extends JFrame {
 	public Sauce getSelectedSauce() {
 		return (Sauce) this.cb_Sauce.getSelectedItem();
 	}
+	
+	// **************************************************** END OF GETTERS
 	
 }

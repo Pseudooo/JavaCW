@@ -31,11 +31,14 @@ public class PizzaApp extends JFrame {
 		// Order that will be used internally to track pizzas
 		this.order = new Order();
 		
+		// PizzaPanel that will contain all Pizzas currently in the order
 		this.pane = new PizzaPanel(this);
 		
+		// Attempt look and feel
 		try {
 			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 		}catch(Exception e) {
+			// Handle error
 			System.err.println("An error has occurred with the look at feel!");
 			e.printStackTrace();
 		}
@@ -52,11 +55,12 @@ public class PizzaApp extends JFrame {
 		JButton btn_NewPizza = new JButton("New Pizza");
 		JButton btn_ClearOrder = new JButton("Clear Order");
 		
-		btn_NewPizza.addActionListener(new NewPizzaListener(this, this.order, this.pane));
+		btn_NewPizza.addActionListener(new NewPizzaListener(this));
 		btn_ClearOrder.addActionListener(new ClearOrderListener(this));
-		
+		// Assign layout
 		this.getContentPane().setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
 		
+		// Header container
 		JPanel header = new JPanel();
 		header.setLayout(new GridLayout(0, 2));
 		
@@ -71,7 +75,7 @@ public class PizzaApp extends JFrame {
 		
 		header.add(left);
 		header.add(right);
-		
+		// Set borders
 		right.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		
 		left.setBorder(BorderFactory.createLineBorder(Color.BLACK));

@@ -17,10 +17,10 @@ public class Pizza {
 		this.sauce = sauce;
 		this.topping1 = topping1;
 		this.topping2 = topping2;
-		this.id = UUID.randomUUID(); // Cryptographically secure
+		this.id = UUID.randomUUID(); // Cryptographically secure (Extremely unlikely to clash)
 	}
 	
-	// ******************************************* GETTERS
+	// ******************************************* START OF GETTERS
 	
 	// Return the total cost of the pizza
 	public double getTotalCost() {

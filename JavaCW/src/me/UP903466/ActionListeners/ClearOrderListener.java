@@ -9,6 +9,11 @@ public class ClearOrderListener implements ActionListener {
 
 	private final PizzaApp app;
 	
+	/**
+	 * @param app
+	 * The app that must have it's respective order
+	 * cleared
+	 */
 	public ClearOrderListener(PizzaApp app) {
 		this.app = app;
 	}

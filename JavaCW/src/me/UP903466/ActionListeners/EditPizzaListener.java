@@ -11,6 +11,12 @@ public class EditPizzaListener implements ActionListener {
 	private final PizzaApp app;
 	private final PizzaBox pizzaBox;
 	
+	/**
+	 * @param app
+	 * The application where the pizza is located
+	 * @param pizzaBox
+	 * The PizzaBox that contains the pizza
+	 */
 	public EditPizzaListener(PizzaApp app, PizzaBox pizzaBox) {
 		this.app = app;
 		this.pizzaBox = pizzaBox;
@@ -19,6 +25,7 @@ public class EditPizzaListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		
+		// Create a window to edit the pizza from
 		@SuppressWarnings("unused")
 		EditPizzaWin edit = new EditPizzaWin(this.app, this.pizzaBox);
 		

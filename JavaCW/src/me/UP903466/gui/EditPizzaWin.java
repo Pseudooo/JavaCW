@@ -48,6 +48,7 @@ public class EditPizzaWin extends JFrame {
 		this.setVisible(true);
 		this.setLayout(new GridLayout(6, 0));
 		
+		// Assign member var
 		this.pizzaBox = pizzaBox;
 		
 		// Assign combo box options
@@ -57,13 +58,14 @@ public class EditPizzaWin extends JFrame {
 		this.cb_Topping2 = new JComboBox<Topping>(Topping.values());
 		this.cb_Sauce = new JComboBox<Sauce>(Sauce.values());
 		
-		// Assign default values
+		// Assign default values (Pizzas current options)
 		this.cb_Size.setSelectedItem(this.pizzaBox.getPizza().getSize());
 		this.cb_Crust.setSelectedItem(this.pizzaBox.getPizza().getCrust());
 		this.cb_Topping1.setSelectedItem(this.pizzaBox.getPizza().getTopping1());
 		this.cb_Topping2.setSelectedItem(this.pizzaBox.getPizza().getTopping2());
 		this.cb_Sauce.setSelectedItem(this.pizzaBox.getPizza().getSauce());
 		
+		// Assign containers for each item
 		JPanel sizePanel = new JPanel();
 		sizePanel.setLayout(new FlowLayout());
 		JLabel lbl_Size = new JLabel("Size: ");
@@ -99,8 +101,16 @@ public class EditPizzaWin extends JFrame {
 		saucePanel.add(this.cb_Sauce);
 		this.add(saucePanel);
 		
+		// Instantiate the buttons
 		this.btn_Confirm = new JButton("Confirm");
 		this.btn_Cancel = new JButton("Cancel");
+		
+		// Assign appropriate listeners
+		ConfirmChangesListener ConfirmListener =
+				new ConfirmChangesListener(app, this);
+		this.btn_Confirm.addActionListener(ConfirmListener);
+		
+		this.btn_Cancel.addActionListener(new CancelOperationListener(this));
 		
 		JPanel btnPanel = new JPanel();
 		btnPanel.setLayout(new GridLayout(0, 2));
@@ -108,13 +118,9 @@ public class EditPizzaWin extends JFrame {
 		btnPanel.add(this.btn_Cancel);
 		this.add(btnPanel);
 		
-		ConfirmChangesListener ConfirmListener =
-				new ConfirmChangesListener(app, this);
-		this.btn_Confirm.addActionListener(ConfirmListener);
-		
-		this.btn_Cancel.addActionListener(new CancelOperationListener(this));
-		
 	}
+	
+	// *************************************************** START OF GETTERS
 	
 	public Size getSelectedSize() {
 		return (Size) this.cb_Size.getSelectedItem();
@@ -143,5 +149,7 @@ public class EditPizzaWin extends JFrame {
 	public Pizza getPizza() {
 		return this.pizzaBox.getPizza();
 	}
+	
+	// **************************************************** END OF GETTERS
 	
 }

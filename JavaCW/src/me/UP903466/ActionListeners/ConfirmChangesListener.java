@@ -12,6 +12,12 @@ public class ConfirmChangesListener implements ActionListener {
 	private final PizzaApp app;
 	private final EditPizzaWin window;
 	
+	/**
+	 * @param app
+	 * The app that must have a pizza updated within
+	 * @param window
+	 * The edit window that must be terminated on confirmation
+	 */
 	public ConfirmChangesListener(PizzaApp app, EditPizzaWin window) {
 		this.app = app;
 		this.window = window; // Assign
@@ -30,9 +36,10 @@ public class ConfirmChangesListener implements ActionListener {
 		// Update the panel on the window
 		this.window.getPizzaBox().updateContent();
 		
-		// Kill the edit window
+		// Kill the editing window
 		this.window.dispose();
 		
+		// Update the text within the primary interface
 		this.app.updateOrderText();
 		
 	}
