@@ -10,8 +10,8 @@ public enum Sauce {
 	// Enumerated type for sauces with their names and prices respectively
 	TOMATO("Tomato", 0.0), PESTO("Pesto", 0.5);
 	
-	private String name;
-	private double cost;
+	private final String name;
+	private final double cost;
 	
 	private Sauce(String name, double cost) {
 		this.cost = cost;

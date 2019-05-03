@@ -7,8 +7,8 @@ public enum Topping {
 	PEPPERONI("Pepperoni", 0.1), MUSHROOM("Mushroom", 0.03), ROCKET("Rocket", 0.05), JALAPEÑOS("Jalapeños", 0.2),
 	ONION("Onion", 0.07), ANCHOVY("Anchovy", 0.09);
 	
-	private String name;
-	private double cost;
+	private final String name;
+	private final double cost;
 	
 	private Topping(String name, double cost) {
 		this.name = name;

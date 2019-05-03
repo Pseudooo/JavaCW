@@ -10,8 +10,8 @@ public enum Size {
 	// Enumerated type of the size, containing the name and price respectively
 	SMALL("Small", 9.45), MEDIUM("Medium", 11.87), LARGE("Large", 15.9);
 	
-	private String name;
-	private double cost;
+	private final String name;
+	private final double cost;
 	
 	private Size(String name, double cost) {
 		this.name = name;

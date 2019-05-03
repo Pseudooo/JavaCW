@@ -10,8 +10,8 @@ public enum Crust {
 	// Enumerated type to show it's name and cost respectively
 	THIN("Thin", 1.08), DEEP("Deep", 1.1), STUFFED("Stuffed", 2.14);
 	
-	private String name;
-	private double cost;
+	private final String name;
+	private final double cost;
 	
 	private Crust(String name, double cost) {
 		this.name = name;

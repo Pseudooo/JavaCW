@@ -34,7 +34,7 @@ public class Order {
 	}
 	
 	public void removePizza(Pizza pizza) {
-		this.removePizza(pizza);
+		this.removePizza(pizza.getID());
 	}
 	
 	public void removePizza(UUID id) {
@@ -78,13 +78,12 @@ public class Order {
 	
 	@Override
 	public String toString() {
-		String format = "";
-		
-		for(Pizza pizza : this.pizzas.subList(0, this.pizzas.size() - 2)) {
+		String format = String.format("===============%n=== Order Cost: %8.2f%n=== Num Pizzas: %8d%n===============%n", this.getTotalCost(), this.size());		
+		if(this.pizzas.size() > 1) for(Pizza pizza : this.pizzas.subList(0, this.pizzas.size() - 2)) {
 			format += pizza.toString()+"\n\n";
 		}
 		
-		format += this.pizzas.get(this.pizzas.size() - 1).toString();
+		if(this.pizzas.size() > 0) format += this.pizzas.get(this.pizzas.size() - 1).toString();
 		
 		return format;
 	}
