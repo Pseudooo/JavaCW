@@ -8,8 +8,6 @@ import javax.swing.JPanel;
 public class PizzaPanel extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
-	
-	private final PizzaApp app;
 
 	public PizzaPanel(PizzaApp app) {
 		
@@ -17,8 +15,6 @@ public class PizzaPanel extends JPanel {
 		
 		this.setBorder(BorderFactory.createTitledBorder(
 				BorderFactory.createLineBorder(Color.BLACK), "<html><h2>Your Order:</h2></html>"));
-		
-		this.app = app;
 		
 	}
 	
@@ -32,8 +28,9 @@ public class PizzaPanel extends JPanel {
 		this.update();
 	}
 	
-	public PizzaApp getApp() {
-		return this.app;
+	public void clear() {
+		this.removeAll();
+		this.update();
 	}
 	
 	private void update() {

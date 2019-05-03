@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
+import me.UP903466.ActionListeners.ClearOrderListener;
 import me.UP903466.ActionListeners.NewPizzaListener;
 import me.UP903466.objects.Order;
 
@@ -52,6 +53,7 @@ public class PizzaApp extends JFrame {
 		JButton btn_ClearOrder = new JButton("Clear Order");
 		
 		btn_NewPizza.addActionListener(new NewPizzaListener(this, this.order, this.pane));
+		btn_ClearOrder.addActionListener(new ClearOrderListener(this));
 		
 		this.getContentPane().setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
 		
