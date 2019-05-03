@@ -51,7 +51,7 @@ public class PizzaApp extends JFrame {
 		this.setSize(1050, 920);
 		this.setResizable(false);
 		
-		this.lbl_TotalCost = new JLabel("<html><h2>Order Cost: <em>£0.00</em></h2></html>");
+		this.lbl_TotalCost = new JLabel("<html><h2>Order Cost: <em>£0.00</em><br>Quantity: <em>0</em></h2></html>");
 		JButton btn_NewPizza = new JButton("New Pizza");
 		JButton btn_ClearOrder = new JButton("Clear Order");
 		
@@ -103,8 +103,9 @@ public class PizzaApp extends JFrame {
 	}
 	
 	public void updateOrderText() {
-		this.lbl_TotalCost.setText(String.format("<html><h2>Order Cost: <em>£%.2f</em></h2></html>",
-				this.order.getTotalCost()));
+		this.lbl_TotalCost.setText(String.format("<html><h2>Order Cost: <em>£%.2f</em><br>Quantity: <em>%d</em></h2></html>",
+				this.order.getTotalCost(),
+				this.order.size()));
 	}
 	
 }
