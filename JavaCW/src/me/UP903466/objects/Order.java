@@ -24,18 +24,32 @@ public class Order {
 		return this.pizzas.contains(pizza);
 	}
 	
+	public boolean orderContains(UUID id) {
+		for(Pizza p : this.pizzas) {
+			if(p.getID().equals(id)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public void removePizza(Pizza pizza) {
-		this.removePizza(pizza.getID());
+		this.removePizza(pizza);
 	}
 	
 	public void removePizza(UUID id) {
+		int index = this.getIndex(id);
+		if(index != -1) this.pizzas.remove(index);
+	}
+	
+	private int getIndex(UUID id) {
 		int index = -1;
 		for(int i = 0; i < this.pizzas.size(); i++) {
 			if(this.pizzas.get(i).getID().equals(id)) {
 				index = i;
 			}
 		}
-		if(index != -1) this.pizzas.remove(index);
+		return index;
 	}
 	
 	public void clear() {
@@ -44,6 +58,17 @@ public class Order {
 	
 	public int size() {
 		return this.pizzas.size();
+	}
+	
+	/**
+	 * @param id
+	 * The ID of the pizza within the order to be updated
+	 * @param pizza
+	 * The pizza that the existing should be updated with
+	 */
+	public void updatePizza(UUID id, Pizza pizza) {
+		int index = this.getIndex(id);
+		if(index != -1) this.pizzas.set(index, pizza);
 	}
 	
 	/*

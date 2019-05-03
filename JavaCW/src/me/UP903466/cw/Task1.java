@@ -42,34 +42,6 @@ public class Task1 {
 						Sauce.PESTO,
 						Topping.OLIVES,
 						Topping.OLIVES
-					),
-				new Pizza(
-						Size.MEDIUM,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.EXTRA_CHEESE,
-						Topping.CHILLI
-					),
-				new Pizza(
-						Size.MEDIUM,
-						Crust.STUFFED,
-						Sauce.PESTO,
-						Topping.OLIVES,
-						Topping.ONION
-					),
-				new Pizza(
-						Size.SMALL,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.CHILLI,
-						Topping.PEPPERONI
-					),
-				new Pizza(
-						Size.SMALL,
-						Crust.THIN,
-						Sauce.PESTO,
-						Topping.OLIVES,
-						Topping.OLIVES
 					)
 		};
 		
