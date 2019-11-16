@@ -65,7 +65,7 @@ public class Task2 {
 		MyOrder.removePizza(pizza1);
 		MyOrder.removePizza(PizzaID);
 		
-		// Print to remonstrate removals
+		// Print to demonstrate removals
 		System.out.println("TEST CASE #2 ============== REMOVING PIZZAS");
 		System.out.println(MyOrder);
 		
